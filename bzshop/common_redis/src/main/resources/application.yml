@@ -1,0 +1,25 @@
+spring:
+  application:
+    name: common-redis
+  redis:
+    database: 1
+    host: 192.168.121.130
+    port: 6379
+    password: 123456
+server:
+  port: 9080
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://localhost:8761/eureka/
+frontend_item_base_info_key: frontend:item:base:info:key
+frontend_item_desc_key: frontend:item:desc:key
+frontend_item_param_key: frontend:item:param:key
+#缓存用户key
+user_session_redis_key: user:session:redis:key
+#缓存购物车key
+frontend_cart_redis_key: frontend:cart:redis:key
+#缓存订单ID的Key
+order_item_id_key: order:item:id:key
+#订单ID的初始值
+init_item_id: 2222

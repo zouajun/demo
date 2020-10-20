@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
+    <groupId>cn.zouajun.bzshop</groupId>
+    <artifactId>bzshop_parent</artifactId>
+    <version>1.0-SNAPSHOT</version>
+    <modules>
+        <module>common_mapper</module>
+        <module>common_pojo</module>
+        <module>commom_eureka</module>
+        <module>common_utils</module>
+        <module>common_item</module>
+        <module>backend_item</module>
+        <module>common_tx_manager_client</module>
+        <module>common_content</module>
+        <module>backend_content</module>
+        <module>frontend_portal</module>
+        <module>common_redis</module>
+        <module>frontend_search</module>
+        <module>frontend_cart</module>
+        <module>frontend_sso</module>
+        <module>frontend_order</module>
+        <module>common_zuul</module>
+        <module>common_config</module>
+    </modules>
+    <packaging>pom</packaging>
+
+    <!-- S p ri n g B o o t 父 工 程 -->
+    <parent>
+        <groupId>org.springframework.boot</groupId>
+        <artifactId>spring-boot-starter-parent</artifactId>
+        <version>2.1.6.RELEASE</version>
+    </parent>
+    <!-- 自 定 义 属 性 标 签  -->
+    <properties>
+        <mybatis-version>3.5.1</mybatis-version>
+        <mysql-connector-java-version>5.1.38</mysql-connector-java-version>
+        <druid-version>1.0.9</druid-version>
+        <pagehelper-version>1.2.10</pagehelper-version>
+        <logback-version>5.0</logback-version>
+        <spring-mybats-version>2.0.1</spring-mybats-version>
+    </properties>
+
+    <dependencyManagement>
+        <dependencies>
+            <!-- S p ri n g C l o u d P l a t f o r m -->
+            <dependency>
+                <groupId>org.springframework.cloud</groupId>
+                <artifactId>spring-cloud-dependencies</artifactId>
+                <version>Greenwich.SR2</version>
+                <type>pom</type>
+                <scope>import</scope>
+            </dependency>
+            <!-- M y B a ti s -->
+            <dependency>
+                <groupId>org.mybatis</groupId>
+                <artifactId>mybatis</artifactId>
+                <version>${mybatis-version}</version>
+            </dependency>
+            <!-- M y S q l D ri v e r -->
+            <dependency>
+                <groupId>mysql</groupId>
+                <artifactId>mysql-connector-java</artifactId>
+                <version>${mysql-connector-java-version}</version>
+            </dependency>
+            <!-- A li b a b a D a t a B a s e C o n n e c ti o n P o o l -->
+            <dependency>
+                <groupId>com.alibaba</groupId>
+                <artifactId>druid</artifactId>
+                <version>${druid-version}</version>
+            </dependency>
+            <!-- P a g e H e l p e r -->
+            <dependency>
+                <groupId>com.github.pagehelper</groupId>
+                <artifactId>pagehelper-spring-boot-starter</artifactId>
+                <version>${pagehelper-version}</version>
+            </dependency>
+            <!-- M y B a ti s A n d S p ri n g I n t e g r a ti o n S t a r t e r -->
+            <dependency>
+                <groupId>org.mybatis.spring.boot</groupId>
+                <artifactId>mybatis-spring-boot-starter</artifactId>
+                <version>${spring-mybats-version}</version>
+            </dependency>
+            <!-- L o g b a c k  -->
+            <dependency>
+                <groupId>net.logstash.logback</groupId>
+                <artifactId>logstash-logback-encoder</artifactId>
+                <version>${logback-version}</version>
+            </dependency>
+        </dependencies>
+    </dependencyManagement>
+
+    <build>
+        <pluginManagement>
+            <!-- S p ri n g B o o t M a v e n P l u g i n -->
+            <plugins>
+                <plugin>
+                    <groupId>org.springframework.boot</groupId>
+                    <artifactId>spring-boot-maven-plugin</artifactId>
+                </plugin>
+            </plugins>
+        </pluginManagement>
+    </build>
+
+</project>

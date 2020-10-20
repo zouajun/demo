@@ -1,0 +1,11 @@
+spring:
+  application:
+    name: frontend-portal
+
+server:
+  port: 9030
+
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://localhost:8761/eureka/

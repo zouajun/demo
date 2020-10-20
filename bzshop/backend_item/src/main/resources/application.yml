@@ -1,0 +1,23 @@
+spring:
+  application:
+    name: backend-item
+
+server:
+  port: 9011
+
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://localhost:8761/eureka/
+feign:
+  hystrix:
+    enabled: true
+
+FTP_HOST: 192.168.121.129
+FTP_PORT: 21
+FTP_USERNAME: root
+FTP_PASSWORD: root
+FTP_BASEPATH:
+tx-lcn:
+  client:
+    manager-address: 192.168.121.130:8070

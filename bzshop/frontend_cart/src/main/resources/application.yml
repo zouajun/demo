@@ -1,0 +1,11 @@
+spring:
+  application:
+    name: frontend-cart
+server:
+  port: 9040
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://localhost:8761/eureka/
+#临时购物车的cookie name
+cart_cookie_name: CART_COOKIE_NAME

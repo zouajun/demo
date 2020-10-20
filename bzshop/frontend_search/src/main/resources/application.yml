@@ -1,0 +1,19 @@
+spring:
+  application:
+    name: frontend-search
+  datasource:
+    driverClassName: com.mysql.jdbc.Driver
+    url: jdbc:mysql://localhost:3306/bzshop?characterEncoding=UTF-8
+    username: root
+    password:
+    type: com.alibaba.druid.pool.DruidDataSource
+  data:
+    solr:
+      host: http://localhost:8983/solr
+      core: bzshop
+server:
+  port: 9100
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://localhost:8761/eureka/

@@ -1,0 +1,9 @@
+spring:
+  application:
+    name: common-config
+server:
+  port: 9000
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://localhost:8761/eureka/
